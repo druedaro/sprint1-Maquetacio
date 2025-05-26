@@ -1,0 +1,87 @@
+h1 {
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+	background-color: #c48771;
+	color: white;
+	transform: rotate(180deg);
+}
+
+p {
+	line-height: 1.50em;
+}
+
+body {
+	font-family: Roboto;
+	font-weight: 150;
+	padding: 25px;
+	background-color: #f8f8f8;
+}
+
+h2 {
+	margin: 10px;
+	border-bottom: 5px;
+	border-bottom-style: solid;
+	border-color:#7a5243;
+	background-color:#c48771;
+	color:white;
+	padding: 5px;
+}	
+
+h3 {
+	margin: 10px;
+	border-bottom: 3.5px;
+	border-bottom-style: solid;
+	border-color:#7a5243;
+	background-color:#c48771;
+	color:white;
+	padding: 3.5px;
+}
+
+h4 {
+	margin: 10px;
+	border-bottom: 3.5px;
+	border-bottom-style: solid;
+	border-color:#7a5243;
+	background-color:#c48771;
+	color:white;
+	padding: 3.5px;
+}
+
+strong {
+	color:#91604f;
+}
+
+strong:hover {
+	color:#e93e03;
+}
+
+.queseyo {
+	background-color: #bcbcbc;
+	padding: 5px;
+	border:2.5px;
+	border-color: #7a5243;
+	border-style: solid;
+	font-weight: 600;
+	color:white;
+	margin: 9px;
+}
+
+.mondongo {
+	color:gold;
+	font-size: 1.75em;
+	font-family: verdana;
+}
+
+.jamonqueso {
+	background-color: #ff7f5030;
+	padding: 5px;
+	border:2.5px;
+	border-color: #7a5243;
+	border-style: solid;
+}
+
+.hola {
+	font-weight: 900;
+	color: darkorange;
+}

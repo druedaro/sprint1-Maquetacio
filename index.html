@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="A simple and efficient bookmark manager to organize your favorite websites." />
   <title>Bookmark Manager</title>
-  <link rel="icon" href="./Recursos/Imagenes//favicon-32x32.png" />
+  <link rel="icon" href="./Recursos/Imagenes/favicon-32x32.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <div class="container nav-container">
-      <img src="./Recursos/Imagenes//logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
+      <img src="./Recursos/Imagenes/logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
       <nav>
         <ul class="nav-menu">
           <li><a href="#features">Features</a></li>
@@ -38,14 +38,17 @@
             <a href="#" class="btn btn-light">Get it on Firefox</a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="./Recursos/Imagenes//illustration-hero.svg" alt="Illustration Hero" class="illustration-class"/>
-        </div>
+        <span class="hero-image">
+          <img src="./Recursos/Imagenes/illustration-hero.svg" alt="Illustration Hero" class="illustration-class"/>
+        </span>
       </div>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
+        <span class="bgform-feature">
+            <img src="./Recursos/Imagenes/rectangle-purple.png" alt="Bg form"  />
+        </span>
       <div class="container">
         <h2>Features</h2>
         <p class="subtitle">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
@@ -58,10 +61,10 @@
 
         <div class="feature-content">
           <div class="feature-image">
-            <img src="./Recursos/Imagenes//illustration-features-tab-1.svg" alt="Bookmarking feature"  />
+            <img src="./Recursos/Imagenes/illustration-features-tab-1.svg" alt="Bookmarking feature"  />
           </div>
           <div class="feature-text">
-            <h3>Bookmark in one click</h3>
+            <h2>Bookmark in one click</h2>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
             <a href="#" class="btn btn-blue">More Info</a>
           </div>
@@ -77,24 +80,24 @@
 
         <div class="extension-grid">
           <div class="card ladder">
-            <img src="./Recursos/Imagenes//logo-chrome.svg" alt="Chrome Logo" />
+            <img src="./Recursos/Imagenes/logo-chrome.svg" alt="Chrome Logo" />
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
-            <img src="./Recursos/Imagenes//bg-dots.svg" alt="Background dots" />
+            <img class="dots-image" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots" />
             <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
           </div>
           <div class="card">
-            <img src="./Recursos/Imagenes//logo-firefox.svg" alt="Firefox Logo" />
+            <img src="./Recursos/Imagenes/logo-firefox.svg" alt="Firefox Logo" />
             <h3>Add to Firefox</h3>
             <p>Minimum version 55</p>
-            <img src="./Recursos/Imagenes//bg-dots.svg" alt="Background dots" />
+            <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
             <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
           </div>
           <div class="card ladder-inv">
-            <img src="./Recursos/Imagenes//logo-opera.svg" alt="Opera Logo" />
+            <img src="./Recursos/Imagenes/logo-opera.svg" alt="Opera Logo" />
             <h3>Add to Opera</h3>
             <p>Minimum version 46</p>
-            <img src="./Recursos/Imagenes//bg-dots.svg" alt="Background dots" />
+            <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
             <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
           </div>
         </div>
@@ -118,7 +121,7 @@
         <details>
           <summary>What about other Chromium browsers?</summary>
         </details>
-        <a href="#" class="btn btn-blue">More Info</a>
+        <a href="#" class="btn btn-blue btn-faq">More Info</a>
       </div>
     </section>
   </main>
@@ -133,18 +136,20 @@
       </form>
     </div>
 
-    <div class="container footer-bottom">
-      <img src="./Recursos/Imagenes//logo-bookmark.svg" alt="Bookmark Logo" />
-      <nav>
-        <ul class="footer-menu">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="footer-bottom">
+        <div class="footer-logo-menu">
+            <img src="./Recursos/Imagenes/logo-bookmark-white.svg" alt="Bookmark Logo" />
+            <nav>
+                <ul class="footer-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
       <div class="social">
-        <img src="./Recursos/Imagenes//icon-facebook.svg" alt="Facebook" />
-        <img src="./Recursos/Imagenes//icon-twitter.svg" alt="Twitter" />
+        <img src="./Recursos/Imagenes/icon-facebook.svg" alt="Facebook" />
+        <img src="./Recursos/Imagenes/icon-twitter.svg" alt="Twitter" />
       </div>
     </div>
   </footer>

@@ -7,7 +7,7 @@
 
 body {
   font-family: Rubik, sans-serif;
-  color: #2b2b2b;
+  color: rgb(37, 43, 70);
   line-height: 1.6;
 }
 
@@ -15,6 +15,10 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
+}
+
+p {
+    color: rgb(145, 148, 161)
 }
 
 /* Header */
@@ -25,6 +29,17 @@ body {
 
 
 }
+
+h1 {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
 
 .nav-container {
   display: flex;
@@ -47,7 +62,7 @@ body {
 .nav-menu a {
   text-decoration: none;
   color: #2b2b2b;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .btn {
@@ -58,6 +73,7 @@ body {
   cursor: pointer;
   border-radius: 5px;
   display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.2) 0rem 0.3rem 0.6rem;
 }
 
 .btn-blue {
@@ -74,6 +90,9 @@ body {
 .btn-red {
   background-color: hsl(0, 94%, 66%);
   color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 120px;
 }
 
 
@@ -84,6 +103,8 @@ body {
   gap: 2rem;
 }
 
+
+
 .hero-buttons {
   margin-top: 1rem;
   display: flex;
@@ -92,14 +113,23 @@ body {
 
 /* Features */
 .features {
-  padding: 4rem 0;
-  text-align: justify;
+  text-align: center;
+}
+
+
+
+.feature-text {
+    margin: 0 8em;
+}
+
+.feature-text p {
+    margin: 1em 0;
 }
 
 .tabs {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 4rem 0;
   gap: 2rem;
 }
 
@@ -123,12 +153,19 @@ body {
   justify-content: center;
 }
 
+.bgform-feature {
+    right: 39em;
+    top: 56em;
+    position: relative;
+
+}
+
 /* Extension */
 .extension {
-  background-color: #f1f3f5;
-  padding: 4rem 0;
+  padding: 4rem 10rem;
   text-align: center;
 }
+
 
 .extension-grid {
   display: grid;
@@ -139,7 +176,7 @@ body {
 
 .card {
   background: white;
-  padding: 2rem;
+  padding: 2rem 0;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
@@ -152,14 +189,37 @@ body {
  transform: translateY(45px);
 }
 
+.dots-image {
+    width: 100%;
+    margin-top: 3em;
+}
+
+.card .btn-blue {
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+}
+
+.card h3 {
+    padding-bottom: 0.7rem;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.card img {
+    padding-bottom: 1.7rem;
+    padding-top: 1.7rem;
+}
+
 /* FAQ */
 .faq {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
+
+
 .faq details {
-  margin: 1rem auto;
+  margin: 0 auto;
   max-width: 600px;
   text-align: left;
 }
@@ -167,18 +227,25 @@ body {
 .faq summary {
   font-weight: bold;
   cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1em 0;
+}
+
+.btn-faq {
+    margin-top: 3.2em;
 }
 
 /* Footer */
 .footer {
   background-color: hsl(231, 69%, 60%);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 1rem 0 1rem;
+  padding-bottom: 0;
   text-align: center;
 }
 
 .newsletter {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .newsletter-form {
@@ -190,10 +257,15 @@ body {
 }
 
 .newsletter-form input {
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 5px;
   border: none;
-  width: 250px;
+  width: 280px;
+}
+
+input[type=email] {
+  font-size: 18px; /* O cualquier valor que desees */
+  letter-spacing: 1px; /* O cualquier valor que desees */
 }
 
 .footer-bottom {
@@ -202,6 +274,15 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  background-color: rgb(37, 43, 70);
+  max-width: 100%;
+  padding: 1.7rem 8.2rem;
+}
+
+.footer-logo-menu {
+        column-gap: 3.5rem;
+        align-items: center;
+        display: flex;
 }
 
 .footer-menu {
@@ -213,18 +294,23 @@ body {
 .footer-menu a {
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
 }
 
 .social img {
-  margin-left: 1rem;
+  margin-left: 2.5rem;
 }
 
 h1 {
     font-size: 4.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
 
 }
+
+.subheading {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+  }
 
 /* Add these styles to your styles.css file */
 
@@ -244,6 +330,7 @@ h1 {
 .feature-image {
   position: relative; /* Make the container relative for absolute positioning of pseudo-element */
   z-index: 1; /* Ensure the image is above the background */
+  margin-left: 4em;
 }
 
 
@@ -255,10 +342,6 @@ h1 {
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
   }
 
   h3 {
@@ -314,7 +397,9 @@ h1 {
     text-align: center;
   }
 
-
+  .extension {
+        padding: 4rem 0;
+  }
   .extension-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -377,18 +462,57 @@ h1 {
     justify-content: space-between;
   }
 
+  .newsletter {
+    margin: 0 35em
+  }
+
   .newsletter-form {
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+   
+  }
+
+
+  .newsletter .subheading {
+    margin-bottom: 1em;
   }
 
   .newsletter-form input {
-    width: auto;
+    width: 66%;
+  }
+
+  .newsletter h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  .newsletter .btn {
+    width: 30%;
   }
 
   .btn {
     max-width: 300px;
     text-align: center;
   }
+
+.faq .subtitle {
+    margin: 1em 32em;
+}
+
+.features .subtitle {
+    margin: 1em 31em;
+}
+
+.extension .subtitle {
+    margin: 1em 20em;
+}
+
+.hero-text p {
+    text-align: left;
+    margin-right: 15em;
+}
+
+.feature-text {
+    text-align: left;
+}
 }

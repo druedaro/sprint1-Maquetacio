@@ -15,6 +15,9 @@
   <header class="header">
     <div class="container nav-container">
       <img src="./Recursos/Imagenes/logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
+      <button id="hamburger" class="hamburger">
+        ☰
+      </button>
       <nav>
         <ul class="nav-menu">
           <li><a href="#features">Features</a></li>
@@ -26,6 +29,33 @@
     </div>
   </header>
 
+  <!-- Mobile menu -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">
+        <img src="./Recursos/Imagenes/logo-bookmark-white.svg" alt="Bookmark Logo" />
+      </div>
+      <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+    </div>
+
+    <div class="mobile-menu-content">
+      <ul class="mobile-menu-nav">
+        <li><a href="#features">FEATURES</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+      <button class="mobile-login-btn">LOGIN</button>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <div class="mobile-social-links">
+        <img src="./Recursos/Imagenes/icon-facebook.svg" alt="Facebook" />
+        <img src="./Recursos/Imagenes/icon-twitter.svg" alt="Twitter" />
+      </div>
+    </div>
+  </div>
+
   <main>
     <!-- Hero Section -->
     <section class="hero">
@@ -34,7 +64,7 @@
           <h1>A Simple Bookmark Manager</h1>
           <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
           <div class="hero-buttons">
-            <a href="#" class="btn btn-blue">Get it on Chrome</a>
+            <a href="#" class="btn btn-blue btn-download">Get it on Chrome</a>
             <a href="#" class="btn btn-light">Get it on Firefox</a>
           </div>
         </div>
@@ -46,11 +76,8 @@
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <span class="bgform-feature">
-            <img src="./Recursos/Imagenes/rectangle-purple.png" alt="Bg form"  />
-        </span>
       <div class="container">
-        <h2>Features</h2>
+        <h2 class="features-h2">Features</h2>
         <p class="subtitle">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
 
         <div class="tabs">
@@ -66,13 +93,13 @@
           <div class="feature-text">
             <h2>Bookmark in one click</h2>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <a href="#" class="btn btn-blue">More Info</a>
+            <a href="#" class="btn btn-blue btn-none">More Info</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Extension Download -->
+    <!-- Extension Download Section -->
     <section class="extension">
       <div class="container">
         <h2>Download the extension</h2>
@@ -84,21 +111,21 @@
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
             <img class="dots-image" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
+            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
           </div>
           <div class="card">
             <img src="./Recursos/Imagenes/logo-firefox.svg" alt="Firefox Logo" />
             <h3>Add to Firefox</h3>
             <p>Minimum version 55</p>
             <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
+            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
           </div>
           <div class="card ladder-inv">
             <img src="./Recursos/Imagenes/logo-opera.svg" alt="Opera Logo" />
             <h3>Add to Opera</h3>
             <p>Minimum version 46</p>
             <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue">Add & Install Extension</a></div>
+            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
           </div>
         </div>
       </div>
@@ -108,18 +135,22 @@
     <section class="faq">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
-        <p class="subtitle">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+        <p class="subtitle">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
         <details>
-          <summary>What is Bookmark?</summary>
+          <summary class="summary-border-top"><div class="summary-text">What is Bookmark?</div></summary>
+          <p>Bookmark is a browser extension which allows you to easily manage your bookmarks. The extension provides simple utilities including but not limited to: searching through your bookmarks, categorizing them into collections, sharing bookmarks and much more.</p>
         </details>
         <details>
-          <summary>How can I request a new browser?</summary>
+          <summary><div class="summary-text">How can I request a new browser?</div></summary>
+          <p>We conduct frequent polls through our newsletter if you wish to voice your opinion on which browsers should be prioritized. We will almost always choose to work on the browsers that have the most demand.</p>
         </details>
         <details>
-          <summary>Is there a mobile app?</summary>
+          <summary><div class="summary-text">Is there a mobile app?</div></summary>
+          <p>Currently there are no plans for developing a mobile app. However, if there is enough demand for it, we're definitely willing to develop one for you!</p>
         </details>
         <details>
-          <summary>What about other Chromium browsers?</summary>
+          <summary><div class="summary-text">What about other Chromium browsers?</div></summary>
+          <p>We're hard at work in developing compatible extensions for other chromium browsers such as Microsoft Edge and Brave.</p>
         </details>
         <a href="#" class="btn btn-blue btn-faq">More Info</a>
       </div>
@@ -129,10 +160,10 @@
   <footer class="footer">
     <div class="container newsletter">
       <p class="subheading">35,000+ already joined</p>
-      <h2>Stay up-to-date with what we’re doing</h2>
+      <h2>Stay up-to-date with what we're doing</h2>
       <form class="newsletter-form">
         <input type="email" placeholder="Enter your email address" required />
-        <button type="submit" class="btn btn-red">Contact Us</button>
+        <button type="submit" class="btn btn-red btn-contact">Contact Us</button>
       </form>
     </div>
 
@@ -153,5 +184,6 @@
       </div>
     </div>
   </footer>
+   <script src="main.js"></script>
 </body>
 </html>

@@ -262,11 +262,14 @@ main {
   top: 50%;
   width: 20px;
   height: 12px;
-  background-image: url("../Recursos/Imagenes/icon-arrow.svg");
+  background-image: url("/Recursos/Imagenes/icon-arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50%);
   transition: transform 0.3s ease;
+}
+.faq .summary-text {
+  max-width: 80%;
 }
 .faq .subtitle {
   margin: 1em auto 3.5em auto;

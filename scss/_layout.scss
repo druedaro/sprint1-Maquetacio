@@ -197,7 +197,8 @@ main {
       }
     }
   }
-  
+
+
   summary {
     font-weight: 400;
     cursor: pointer;
@@ -217,13 +218,17 @@ main {
       top: 50%;
       width: 20px;
       height: 12px;
-      background-image: url('../Recursos/Imagenes/icon-arrow.svg');
+      background-image: url('/Recursos/Imagenes/icon-arrow.svg');
       background-size: contain;
       background-repeat: no-repeat;
-      transform: translateY(-50%);
+      transform: translateY(-50%); 
       transition: transform $transition-ease;
     }
   }
+
+  .summary-text {
+    max-width: 80%;
+  } 
   
   .subtitle {
     margin: 1em auto 3.5em auto;

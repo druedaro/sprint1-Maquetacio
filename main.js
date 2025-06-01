@@ -20,3 +20,4 @@ mobileLinks.forEach(link => {
     mobileMenu.classList.remove('active');
   });
 });
+ 

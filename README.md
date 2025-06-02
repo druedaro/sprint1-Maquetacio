@@ -1,51 +1,50 @@
-# **SPRINT 1: - Etapa 2/3: Refactorización con Sass**
+# **SPRINT 1: - Etapa 3/3: Refactorización con Tailwind CSS**
 
-Durante esta segunda etapa del proyecto, el objetivo principal fue refactorizar la base de código existente (desarrollada con HTML + CSS puro) utilizando **Sass**, el popular preprocesador CSS. El uso de Sass permitió modularizar estilos, reutilizar variables y mixins, y mejorar la escalabilidad del proyecto.
+Durante esta tercera y última etapa del sprint, se ha refactorizado completamente el proyecto para utilizar **Tailwind CSS**, un framework de utilidades que permite construir interfaces modernas de forma rápida y eficiente mediante clases predefinidas.
 
-🔗 **Repositorio del proyecto**: https://github.com/druedaro/sprint1-Maquetacio - Branch: feature/sass
+🔗 **Repositorio del proyecto**: https://github.com/druedaro/sprint1-Maquetacio - Branch: `feature/tailwind`
 
 ## **🚀 Objetivos Principales**
 
-* Refactorización del archivo `styles.css` utilizando Sass (sintaxis SCSS)
-* Organización del código CSS en archivos parciales (`_variables.scss`, `_header.scss`, etc.)
-* Aplicación de **variables Sass** para mantener coherencia visual (colores, tipografías, márgenes...)
-* Uso de **mixins y anidación** para reducir repetición y aumentar legibilidad
-* Compilación a `styles.css` con `sass --watch`
-* Conservación fiel del diseño original, respetando la estructura y comportamiento del proyecto Vanilla
+* Sustitución total del CSS tradicional por clases utilitarias de **Tailwind CSS**
+* Eliminación del antiguo sistema de estilos (Sass/CSS)
+* Configuración de Tailwind CSS mediante `tailwind.config.js` y `postcss.config.js`
+* Uso de utilidades Tailwind para:
+  * Espaciado, tipografía, colores, bordes, sombreado, etc.
+  * Diseño responsive mediante breakpoints de Tailwind
+  * Estilización rápida y consistente sin escribir CSS personalizado
+* Creación de un archivo `main.css` con directivas `@tailwind` y compilación automática
 
 ## **💻 Stack Tecnológico**
 
 * **HTML5**
-* **Sass (SCSS)** - Preprocesador CSS
-* **CSS3** (generado automáticamente desde Sass)
+* **Tailwind CSS** (con PostCSS y configuración personalizada)
 * **JS** - Menú mobile
+* **Node.js / PostCSS / npm** - Entorno de desarrollo y construcción
 * **Git/GitHub** - Control de versiones
 
 ## **✅ Arquitectura del Proyecto**
-```
 📁 sprint1-Maquetacio
 ├── 📄 index.html
 ├── 📄 README.md
 ├── 📄 .gitignore
 ├── 📄 LICENSE.md
 ├── 📄 main.js
-├── 📄 styles.css (compilado automáticamente desde /scss)
-├── 📁 scss
-│ ├── 📄 main.scss
-│ ├── 📄 _variables.scss
-│ ├── 📄 _mixins.scss
-│ ├── 📄 _reset.scss
-│ └── 📄 _header.scss
+├── 📄 tailwind.config.js
+├── 📄 styles.css (contiene: @tailwind base/components/utilities)
+├── 📁 src
+├    └── 📄 output.css (generado automáticamente por Tailwind)
 └── 📁 Recursos
     ├── 📁 Diseño
     └── 📁 Imagenes
-```
-
 
 ## **🛑 Desafíos Encontrados**
 
-* **Separación de estilos existentes**: Traducir un único archivo CSS plano a una estructura modular Sass sin romper el diseño requirió un análisis detallado de las secciones.
-* **Gestión de compilación**: Aprender a configurar y mantener el sistema de compilación correctamente, haciendo uso adicional de extensiones del IDE Visual Studio Code.
-* **Consistencia con Vanilla**: Mantener la misma apariencia final que la implementación en la rama `vanilla`, asegurando que la refactorización no alterase el resultado visual.
+* **Cambio de mentalidad**: Pasar de un enfoque basado en clases semánticas y CSS modular (Sass) a clases utilitarias supuso un cambio de enfoque importante.
+* **Configuración inicial**: Instalar y configurar correctamente Tailwind, asegurando que los estilos se generen sin errores ni advertencias. Problemas a la hora de trabajar con la versión beta 4.1. Downgrade a la versión anterior (latest).
+* **Eliminación progresiva del CSS antiguo**: Identificar qué estilos podían ser completamente reemplazados por utilidades de Tailwind sin romper el diseño.
+* **Advertencias en IDE**: Resolver advertencias visuales en VSCode relacionadas con `@tailwind`, configurando correctamente el entorno.
 
+---
 
+✅ Con esta tercera etapa finaliza el proceso de modernización del proyecto, que ha pasado de HTML + CSS puro a Sass, y finalmente a Tailwind CSS, ganando en modularidad, velocidad de desarrollo y mantenibilidad.

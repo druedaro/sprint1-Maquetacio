@@ -1,189 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="A simple and efficient bookmark manager to organize your favorite websites." />
-  <title>Bookmark Manager</title>
-  <link rel="icon" href="./Recursos/Imagenes/favicon-32x32.png" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prueba Tailwind</title>
+    <link href="./src/output.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-container">
-      <img src="./Recursos/Imagenes/logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
-      <button id="hamburger" class="hamburger">
-        ☰
-      </button>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <button class="btn btn-red" >Login</button>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu-header">
-      <div class="mobile-menu-logo">
-        <img src="./Recursos/Imagenes/logo-bookmark-white.svg" alt="Bookmark Logo" />
-      </div>
-      <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
-    </div>
-
-    <div class="mobile-menu-content">
-      <ul class="mobile-menu-nav">
-        <li><a href="#features">FEATURES</a></li>
-        <li><a href="#pricing">PRICING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-
-      <button class="mobile-login-btn">LOGIN</button>
-    </div>
-
-    <div class="mobile-menu-footer">
-      <div class="mobile-social-links">
-        <img src="./Recursos/Imagenes/icon-facebook.svg" alt="Facebook" />
-        <img src="./Recursos/Imagenes/icon-twitter.svg" alt="Twitter" />
-      </div>
-    </div>
+  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md text-center">
+    <h1 class="text-3xl font-bold text-blue-600 mb-4">¡Hola, Tailwind CSS!</h1>
+    <p class="text-gray-700 mb-6">Si ves este texto con estilos, Tailwind está funcionando correctamente.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+      Botón de prueba
+    </button>
   </div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>A Simple Bookmark Manager</h1>
-          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-blue btn-download">Get it on Chrome</a>
-            <a href="#" class="btn btn-light">Get it on Firefox</a>
-          </div>
-        </div>
-        <span class="hero-image">
-          <img src="./Recursos/Imagenes/illustration-hero.svg" alt="Illustration Hero" class="illustration-class"/>
-        </span>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="features-h2">Features</h2>
-        <p class="subtitle">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-
-        <div class="tabs">
-          <button class="tab active">Simple Bookmarking</button>
-          <button class="tab">Speedy Searching</button>
-          <button class="tab">Easy Sharing</button>
-        </div>
-
-        <div class="feature-content">
-          <div class="feature-image">
-            <img src="./Recursos/Imagenes/illustration-features-tab-1.svg" alt="Bookmarking feature"  />
-          </div>
-          <div class="feature-text">
-            <h2>Bookmark in one click</h2>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <a href="#" class="btn btn-blue btn-none">More Info</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Extension Download Section -->
-    <section class="extension">
-      <div class="container">
-        <h2>Download the extension</h2>
-        <p class="subtitle">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-
-        <div class="extension-grid">
-          <div class="card ladder">
-            <img src="./Recursos/Imagenes/logo-chrome.svg" alt="Chrome Logo" />
-            <h3>Add to Chrome</h3>
-            <p>Minimum version 62</p>
-            <img class="dots-image" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
-          </div>
-          <div class="card">
-            <img src="./Recursos/Imagenes/logo-firefox.svg" alt="Firefox Logo" />
-            <h3>Add to Firefox</h3>
-            <p>Minimum version 55</p>
-            <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
-          </div>
-          <div class="card ladder-inv">
-            <img src="./Recursos/Imagenes/logo-opera.svg" alt="Opera Logo" />
-            <h3>Add to Opera</h3>
-            <p>Minimum version 46</p>
-            <img src="./Recursos/Imagenes/bg-dots.svg" class="dots-image" alt="Background dots" />
-            <div><a href="#" class="btn btn-blue btn-download">Add & Install Extension</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <p class="subtitle">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
-        <details>
-          <summary class="summary-border-top"><div class="summary-text">What is Bookmark?</div></summary>
-          <p>Bookmark is a browser extension which allows you to easily manage your bookmarks. The extension provides simple utilities including but not limited to: searching through your bookmarks, categorizing them into collections, sharing bookmarks and much more.</p>
-        </details>
-        <details>
-          <summary><div class="summary-text">How can I request a new browser?</div></summary>
-          <p>We conduct frequent polls through our newsletter if you wish to voice your opinion on which browsers should be prioritized. We will almost always choose to work on the browsers that have the most demand.</p>
-        </details>
-        <details>
-          <summary><div class="summary-text">Is there a mobile app?</div></summary>
-          <p>Currently there are no plans for developing a mobile app. However, if there is enough demand for it, we're definitely willing to develop one for you!</p>
-        </details>
-        <details>
-          <summary><div class="summary-text">What about other Chromium browsers?</div></summary>
-          <p>We're hard at work in developing compatible extensions for other chromium browsers such as Microsoft Edge and Brave.</p>
-        </details>
-        <a href="#" class="btn btn-blue btn-faq">More Info</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container newsletter">
-      <p class="subheading">35,000+ already joined</p>
-      <h2>Stay up-to-date with what we're doing</h2>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" required />
-        <button type="submit" class="btn btn-red btn-contact">Contact Us</button>
-      </form>
-    </div> 
-
-    <div class="footer-bottom">
-        <div class="footer-logo-menu">
-            <img src="./Recursos/Imagenes/logo-bookmark-white.svg" alt="Bookmark Logo" />
-            <nav>
-                <ul class="footer-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-      <div class="social">
-        <img src="./Recursos/Imagenes/icon-facebook.svg" alt="Facebook" />
-        <img src="./Recursos/Imagenes/icon-twitter.svg" alt="Twitter" />
-      </div>
-    </div>
-  </footer>
-   <script src="main.js"></script>
+</body>
 </body>
 </html>

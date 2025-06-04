@@ -1,23 +1,19 @@
-// Mobile menu
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu-overlay');
-const mobileMenuClose = document.querySelector('.mobile-menu-close');
+  //Menu mobile
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenuOverlay');
+  const closeBtn = document.getElementById('mobileMenuClose');
 
-// Open
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
-});
-
-// Close
-mobileMenuClose.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-});
-
-// Close when click any link
-const mobileLinks = document.querySelectorAll('.mobile-menu-nav a');
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.remove('invisible', 'opacity-0');
+    mobileMenu.classList.add('visible', 'opacity-100');
   });
-});
- 
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('invisible', 'opacity-0');
+    mobileMenu.classList.remove('visible', 'opacity-100');
+  });
+
+
+// Tabs
+
+

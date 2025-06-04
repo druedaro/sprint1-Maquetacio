@@ -1,22 +1,304 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Prueba Tailwind</title>
-    <link href="./src/output.css" rel="stylesheet" />
-</head>
-<body>
-    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <div class="bg-white p-8 rounded-lg shadow-lg max-w-md text-center">
-    <h1 class="text-3xl font-bold text-blue-600 mb-4">¡Hola, Tailwind CSS!</h1>
-    <p class="text-gray-700 mb-6">Si ves este texto con estilos, Tailwind está funcionando correctamente.</p>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-      Botón de prueba
-    </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A simple and efficient bookmark manager to organize your favorite websites." />
+  <title>Bookmark Manager</title>
+  <link rel="icon" href="./Recursos/Imagenes/favicon-32x32.png" />
+  <link rel="stylesheet" href="./src/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body class="font-rubik text-dark-blue leading-relaxed overflow-x-hidden">
+  <!-- Header -->
+  <header class="bg-white fixed top-0 left-0 w-full z-50 px-4 md:px-6 lg:px-20">
+    <div class="flex justify-between items-center py-6">
+      <img src="./Recursos/Imagenes/logo-bookmark.svg" alt="Bookmark Logo" class="h-6" />
+      
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="block lg:hidden text-2xl bg-none border-none cursor-pointer">
+        ☰
+      </button>
+      
+      <!-- Desktop navigation -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center list-none gap-8 uppercase">
+          <li><a href="#features" class="text-gray-700 font-normal hover:text-red-600 transition-colors">Features</a></li>
+          <li><a href="#pricing" class="text-gray-700 font-normal hover:text-red-600 transition-colors">Pricing</a></li>
+          <li><a href="#contact" class="text-gray-700 font-normal hover:text-red-600 transition-colors">Contact</a></li>
+          <li><button class="bg-primary-red text-white px-8 py-2 rounded-lg uppercase font-normal text-lg hover:bg-white hover:text-primary-red border hover:border-primary-red transition-all shadow-md">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu-overlay fixed top-0 left-0 w-full h-full bg-dark-blue bg-opacity-95 z-50 flex flex-col opacity-0 invisible transition-all duration-300" id="mobileMenuOverlay">
+    <div class="flex justify-between items-center p-5 px-8">
+      <img src="./Recursos/Imagenes/logo-bookmark.svg" alt="Bookmark Logo" class="h-6" />
+      <button class="mobile-menu-close bg-none border-none text-white text-2xl cursor-pointer w-10 h-10 flex items-center justify-center" id="mobileMenuClose">✕</button>
+    </div>
+
+    <div class="flex-1 flex flex-col justify-start px-8">
+      <ul class="list-none mb-10">
+        <li class="border-b border-white border-opacity-20 first:border-t">
+          <a href="#features" class="block text-white no-underline py-6 text-lg font-normal tracking-widest uppercase text-center hover:text-white hover:text-opacity-80 transition-colors">FEATURES</a>
+        </li>
+        <li class="border-b border-white border-opacity-20">
+          <a href="#pricing" class="block text-white no-underline py-6 text-lg font-normal tracking-widest uppercase text-center hover:text-white hover:text-opacity-80 transition-colors">PRICING</a>
+        </li>
+        <li class="border-b border-white border-opacity-20">
+          <a href="#contact" class="block text-white no-underline py-6 text-lg font-normal tracking-widest uppercase text-center hover:text-white hover:text-opacity-80 transition-colors">CONTACT</a>
+        </li>
+      </ul>
+
+      <button class="bg-transparent border-2 border-white text-white py-4 px-0 rounded font-normal tracking-widest uppercase cursor-pointer mb-10 hover:bg-white hover:text-primary-blue transition-all">LOGIN</button>
+    </div>
+
+    <div class="px-8 pb-10 text-center">
+      <div class="flex justify-center gap-10">
+        <img src="./Recursos/Imagenes/icon-facebook.svg" alt="Facebook" class="w-6 h-6 brightness-0 invert hover:opacity-70 cursor-pointer transition-opacity" />
+        <img src="./Recursos/Imagenes/icon-twitter.svg" alt="Twitter" class="w-6 h-6 brightness-0 invert hover:opacity-70 cursor-pointer transition-opacity" />
+      </div>
+    </div>
   </div>
 
-</body>
+  <main class="mt-24 md:mt-28 lg:mt-32">
+    <!-- Hero Section -->
+    <section class="py-8 md:py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <!-- Text Content -->
+          <div class="order-2 lg:order-1 text-center lg:text-left">
+            <h1 class="text-2xl md:text-3xl lg:text-5xl font-medium leading-tight mb-4 md:mb-6 capitalize">A Simple Bookmark Manager</h1>
+            <p class="text-grayish-blue mb-6 md:mb-8 text-sm md:text-base">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#" class="bg-primary-blue text-white px-6 py-3 rounded-md font-normal hover:bg-white hover:text-primary-blue border hover:border-primary-blue transition-all shadow-md text-sm md:text-base">Get it on Chrome</a>
+              <a href="#" class="bg-gray-100 text-gray-700 px-6 py-3 rounded-md font-normal border border-gray-300 hover:bg-white hover:text-gray-800 hover:border-gray-800 transition-all shadow-md text-sm md:text-base">Get it on Firefox</a>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="order-1 lg:order-2">
+            <img src="./Recursos/Imagenes/illustration-hero.svg" alt="Illustration Hero" class="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-16 lg:py-20" id="features">
+      <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4 capitalize">Features</h2>
+          <p class="text-grayish-blue max-w-2xl mx-auto text-sm md:text-base">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex flex-col md:flex-row justify-center gap-2 md:gap-0 mb-12 md:mb-16">
+          <button class="tab relative border-none bg-none p-4 text-sm md:text-base cursor-pointer border-b-4 border-transparent hover:text-red-600 border-b-red-600 text-black md:border-b-transparent md:border-b-2 md:border-b-red-600 md:text-grayish-blue md:hover:text-grayish-blue active">Simple Bookmarking</button>
+          <button class="tab relative border-none bg-none p-4 text-sm md:text-base cursor-pointer border-b-4 border-transparent hover:text-red-600 text-grayish-blue md:border-b md:border-gray-300 md:pb-5">Speedy Searching</button>
+          <button class="tab relative border-none bg-none p-4 text-sm md:text-base cursor-pointer border-b-4 border-transparent hover:text-red-600 text-grayish-blue md:border-b md:border-gray-300 md:pb-5">Easy Sharing</button>
+        </div>
+
+        <!-- Feature content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16">
+          <div class="order-1">
+             <img src="./Recursos/Imagenes/illustration-features-tab-1.svg" alt="Bookmarking feature" class="w-full max-w-sm md:max-w-md mx-auto" />
+          </div>
+          <div class="order-2 text-center lg:text-left">
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-medium mb-4 capitalize">Bookmark in one click</h2>
+            <p class="text-grayish-blue mb-6 text-sm md:text-base">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+            <a href="#" class="bg-primary-blue text-white px-6 py-3 rounded-md font-normal hover:bg-white hover:text-primary-blue border hover:border-primary-blue transition-all shadow-md hidden lg:inline-block text-sm md:text-base">More Info</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extension Download Section -->
+    <section class="py-12 md:py-16 lg:py-20">
+      <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4 capitalize">Download the extension</h2>
+        <p class="text-grayish-blue max-w-xl mx-auto mb-12 md:mb-16 text-sm md:text-base">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <!-- Chrome Card -->
+          <div class="bg-white mx-10  py-16 md:p-8  md:pb-12  md:pt-16 rounded-lg shadow-lg lg:-translate-y-8 md:mx-0">
+            <img src="./Recursos/Imagenes/logo-chrome.svg" alt="Chrome Logo" class="mx-auto mb-6" />
+            <h3 class="text-lg md:text-xl font-medium mb-2 md:font-bold">Add to Chrome</h3>
+            <p class="text-grayish-blue mb-6 md:mb-8 text-sm md:text-base">Minimum version 62</p>
+            <img class="w-full h-1 mb-9 md:mb-9" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots"/>
+            <a href="#" class="bg-primary-blue text-white font-medium px-8 py-4 md:px-7 md:py-4 rounded-lg hover:bg-white hover:text-primary-blue border hover:border-primary-blue transition-all shadow-md text-sm md:font-normal">Add & Install Extension</a>
+          </div>
+
+          <!-- Firefox Card -->
+          <div class="bg-white mx-10  py-16 md:p-8  md:pb-12  md:pt-16 rounded-lg shadow-lg  md:mx-0">
+            <img src="./Recursos/Imagenes/logo-firefox.svg" alt="Firefox Logo" class="mx-auto mb-6" />
+            <h3 class="text-lg md:text-xl font-medium mb-2 md:font-bold">Add to Firefox</h3>
+            <p class="text-grayish-blue mb-10 md:mb-8 text-sm md:text-base">Minimum version 55</p>
+            <img class="w-full h-1 mb-9 md:mb-9" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots"/>
+            <a href="#" class="bg-primary-blue text-white font-medium px-8 py-4 md:px-7 md:py-4 rounded-lg hover:bg-white hover:text-primary-blue border hover:border-primary-blue transition-all shadow-md text-sm md:text-sm md:font-normal">Add & Install Extension</a>
+          </div>
+
+          <!-- Opera Card -->
+          <div class="bg-white mx-10  py-16 md:p-8 md:mx-0 md:pb-12  md:pt-16 rounded-lg shadow-lg md:col-span-2 lg:col-span-1 lg:translate-y-8">
+           <img src="./Recursos/Imagenes/logo-opera.svg" alt="Opera Logo" class="mx-auto mb-6" />
+            <h3 class="text-lg md:text-xl font-medium mb-2 md:font-bold">Add to Opera</h3>
+            <p class="text-grayish-blue mb-6 md:mb-8 text-sm md:text-base">Minimum version 46</p>
+            <img class="w-full h-1 mb-9 md:mb-9" src="./Recursos/Imagenes/bg-dots.svg" alt="Background dots"/>
+            <a href="#" class="bg-primary-blue text-white font-medium px-8 py-4 md:px-7 md:py-4 rounded-lg hover:bg-white hover:text-primary-blue border hover:border-primary-blue transition-all shadow-md text-sm md:text-sm md:font-normal">Add & Install Extension</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- FAQ Section -->
+    <section class="py-12 md:py-16 lg:py-20 text-center">
+      <div class="container mx-auto px-4 md:px-8">
+        <h2 class="text-2xl md:text-3xl font-medium mb-4">Frequently Asked Questions</h2>
+        <p class="text-light-gray max-w-2xl mx-auto mb-10 md:mb-14 text-sm md:text-base">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+        
+        <div class="max-w-2xl mx-auto">
+          <!-- FAQ Item 1 -->
+          <details class="border-b border-gray-300 group">
+            <summary class="flex justify-between items-center py-4 md:py-5 cursor-pointer list-none text-left hover:text-red-600 transition-colors">
+              <span class="text-base md:text-lg font-normal">What is Bookmark?</span>
+              <svg class="w-5 h-3 transform transition-transform group-open:rotate-180 group-open:text-red-600" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="currentColor" stroke-width="3" fill="none" d="m1 1 9 9 9-9"/>
+              </svg>
+            </summary>
+            <div class="pb-4 md:pb-6">
+              <p class="text-light-gray text-left text-sm md:text-base">Bookmark is a browser extension which allows you to easily manage your bookmarks. The extension provides simple utilities including but not limited to: searching through your bookmarks, categorizing them into collections, sharing bookmarks and much more.</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="border-b border-gray-300 group">
+            <summary class="flex justify-between items-center py-4 md:py-5 cursor-pointer list-none text-left hover:text-red-600 transition-colors">
+              <span class="text-base md:text-lg font-normal">How can I request a new browser?</span>
+              <svg class="w-5 h-3 transform transition-transform group-open:rotate-180 group-open:text-red-600" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="currentColor" stroke-width="3" fill="none" d="m1 1 9 9 9-9"/>
+              </svg>
+            </summary>
+            <div class="pb-4 md:pb-6">
+              <p class="text-light-gray text-left text-sm md:text-base">We conduct frequent polls through our newsletter if you wish to voice your opinion on which browsers should be prioritized. We will almost always choose to work on the browsers that have the most demand.</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="border-b border-gray-300 group">
+            <summary class="flex justify-between items-center py-4 md:py-5 cursor-pointer list-none text-left hover:text-red-600 transition-colors">
+              <span class="text-base md:text-lg font-normal">Is there a mobile app?</span>
+              <svg class="w-5 h-3 transform transition-transform group-open:rotate-180 group-open:text-red-600" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="currentColor" stroke-width="3" fill="none" d="m1 1 9 9 9-9"/>
+              </svg>
+            </summary>
+            <div class="pb-4 md:pb-6">
+              <p class="text-light-gray text-left text-sm md:text-base">Currently there are no plans for developing a mobile app. However, if there is enough demand for it, we're definitely willing to develop one for you!</p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 4 -->
+          <details class="border-b border-gray-300 group">
+            <summary class="flex justify-between items-center py-4 md:py-5 cursor-pointer list-none text-left hover:text-red-600 transition-colors">
+              <span class="text-base md:text-lg font-normal">What about other Chromium browsers?</span>
+              <svg class="w-5 h-3 transform transition-transform group-open:rotate-180 group-open:text-red-600" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="currentColor" stroke-width="3" fill="none" d="m1 1 9 9 9-9"/>
+              </svg>
+            </summary>
+            <div class="pb-4 md:pb-6">
+              <p class="text-light-gray text-left text-sm md:text-base">We're hard at work in developing compatible extensions for other chromium browsers such as Microsoft Edge and Brave.</p>
+            </div>
+          </details>
+        </div>
+
+        <a href="#" class="inline-block mt-8 md:mt-12 bg-primary-blue text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-primary-blue border-2 border-primary-blue transition-colors shadow-lg text-sm md:text-base">More Info</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white">
+    <!-- Newsletter Section -->
+    <div class="bg-primary-blue text-center py-12 md:py-16">
+      <div class="container mx-auto px-4 md:px-8">
+        <p class="text-white text-xs md:text-sm uppercase tracking-widest mb-4">35,000+ already joined</p>
+        <h2 class="text-2xl md:text-3xl font-medium mb-6 md:mb-8 max-w-lg mx-auto">Stay up-to-date with what we're doing</h2>
+        
+        <form class="max-w-lg mx-auto flex flex-col md:flex-row gap-3">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            required 
+            class="flex-1 px-4 py-3 rounded-md text-gray-800 text-sm md:text-lg tracking-wide border"
+          />
+          <button type="submit" class="bg-primary-red text-white px-6 py-3 rounded-md font-medium border-primary-red hover:bg-white hover:text-primary-red border hover:border-primary-red transition-all shadow-md text-sm md:text-base">Contact Us</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-dark-blue">
+      <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6 md:py-7">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+          <!-- Logo and Menu -->
+          <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-14">
+            <!-- Logo -->
+            <img src="./Recursos/Imagenes/logo-bookmark-white.svg" alt="Bookmark Logo"/>
+
+            <!-- Navigation Menu -->
+            <nav>
+              <ul class="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 text-center lg:text-left">
+                <li><a href="#features" class="text-white hover:text-red-600 transition-colors uppercase tracking-wider text-sm md:text-base">Features</a></li>
+                <li><a href="#pricing" class="text-white hover:text-red-600 transition-colors uppercase tracking-wider text-sm md:text-base">Pricing</a></li>
+                <li><a href="#contact" class="text-white hover:text-red-600 transition-colors uppercase tracking-wider text-sm md:text-base">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-8 md:gap-10 text-white">
+            <!-- Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 hover:text-red-600 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.337v21.326C0 23.4.6 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.795.716-1.795 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.4 24 24 23.4 24 22.663V1.337C24 .6 23.4 0 22.675 0z"/>
+            </svg>
+
+            <!-- Twitter -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 hover:text-red-600 transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3.1a9.864 9.864 0 0 1-3.127 1.195 4.92 4.92 0 0 0-8.384 4.482A13.978 13.978 0 0 1 1.671 3.149a4.822 4.822 0 0 0-.666 2.475 4.92 4.92 0 0 0 2.188 4.1 4.903 4.903 0 0 1-2.228-.616v.062a4.926 4.926 0 0 0 3.946 4.827 4.902 4.902 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.417A9.868 9.868 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('opacity-0', 'invisible');
+      mobileMenuOverlay.classList.add('opacity-100', 'visible');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('opacity-100', 'visible');
+      mobileMenuOverlay.classList.add('opacity-0', 'invisible');
+    });
+
+    // Close mobile menu when clicking on links
+    const mobileMenuLinks = mobileMenuOverlay.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('opacity-100', 'visible');
+        mobileMenuOverlay.classList.add('opacity-0', 'invisible');
+      });
+    });
+  </script>
 </body>
 </html>

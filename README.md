@@ -24,6 +24,7 @@ Durante esta tercera y última etapa del sprint, se ha refactorizado completamen
 * **Git/GitHub** - Control de versiones
 
 ## **✅ Arquitectura del Proyecto**
+```
 📁 sprint1-Maquetacio
 ├── 📄 index.html
 ├── 📄 README.md
@@ -37,6 +38,7 @@ Durante esta tercera y última etapa del sprint, se ha refactorizado completamen
 └── 📁 Recursos
     ├── 📁 Diseño
     └── 📁 Imagenes
+```
 
 ## **🛑 Desafíos Encontrados**
 
@@ -50,4 +52,4 @@ Durante esta tercera y última etapa del sprint, se ha refactorizado completamen
 
 ---
 
-✅ Con esta tercera etapa finaliza el proceso de modernización del proyecto, que ha pasado de HTML + CSS puro a Sass, y finalmente a Tailwind CSS, ganando en modularidad, velocidad de desarrollo y mantenibilidad.
+Con esta tercera etapa finaliza el proceso de modernización del proyecto, que ha pasado de HTML + CSS puro a Sass, y finalmente a Tailwind CSS, ganando en modularidad, velocidad de desarrollo y mantenibilidad.

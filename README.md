@@ -44,6 +44,9 @@ Durante esta tercera y última etapa del sprint, se ha refactorizado completamen
 * **Configuración inicial**: Instalar y configurar correctamente Tailwind, asegurando que los estilos se generen sin errores ni advertencias. Problemas a la hora de trabajar con la versión beta 4.1. Downgrade a la versión anterior (latest).
 * **Eliminación progresiva del CSS antiguo**: Identificar qué estilos podían ser completamente reemplazados por utilidades de Tailwind sin romper el diseño.
 * **Advertencias en IDE**: Resolver advertencias visuales en VSCode relacionadas con `@tailwind`, configurando correctamente el entorno.
+* **Transformar iconos de RRSS**: Para poder modificar el background hover de los svg contenidos en la carpeta Recursos ha sido necesario pasarlas a código inline para poder modificar sus propiedades.
+* **Extender propiedades CSS a la configuración general de tailwind**: Al ser un proyecto pequeño (landing page) he considerado buena práctica extender algunas propiedades como colores propios o el font-family.
+* **Responsive**: Desde la configuración general de tailwind, definí los dos breakpoints utilizados en el proyecto.
 
 ---
 

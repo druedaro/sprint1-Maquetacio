@@ -1,26 +1,23 @@
-# 🎨 Sprint 1 - Design to Development - ITACADEMY
-🚧 WARNING: This project is still in progress and not yet complete.
-Some features, styles, or sections may be missing or unfinished.
+# 🎨 Sprint 1 - Del diseño al desarrollo - ITACADEMY
+🚧 Este proyecto es un ejercicio de replicación de diseño para practicar el maquetado con distintos enfoques.
 
-This project is a design replication exercise to practice styling with different approaches.
+El mismo diseño se ha implementado tres veces usando:
+  CSS puro (Vanilla CSS)
+  SASS
+  Tailwind CSS
+  
+## 🧩 PEstructura del proyecto
+El proyecto está organizado en ramas de Git separadas, cada una contiene una versión diferente del mismo diseño:
 
-The same design is implemented three times using:
+feature/vanilla: implementación base usando CSS puro
+feature/sass: el mismo diseño refactorizado con SASS
+feature/tailwind: versión final utilizando Tailwind CSS
+Cada rama es independiente, por lo que puedes cambiar entre ellas y ver cómo se construye el mismo diseño con distintas tecnologías.
 
-Vanilla CSS
-SASS
-Tailwind CSS
-## 🧩 Project Structure
-The project is organized into separate Git branches, each containing a different version of the same layout:
+## 🚀 Cómo empezar
+Para explorar cada versión del proyecto, necesitas clonar el repositorio y cambiar a cada rama individualmente.
 
-Vanilla-CSS: the base implementation using plain CSS
-SASS-Refactor: the same layout refactored with SASS
-Tailwind-Refactor-v2: the final version using Tailwind CSS
-Each branch is independent, so you can switch between them and see how the same layout is built using different technologies.
-
-## 🚀 Getting Started
-To explore each version of the project, you’ll need to clone and checkout each branch individually.
-
-1. Clone the Repository
+1. Clona el repositiorio:
 ```
 git clone https://github.com/druedaro/sprint1-Maquetacio.git
 cd sprint1-Maquetacio

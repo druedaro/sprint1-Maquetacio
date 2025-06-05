@@ -9,9 +9,12 @@ El mismo diseño se ha implementado tres veces usando:
 ## 🧩 PEstructura del proyecto
 El proyecto está organizado en ramas de Git separadas, cada una contiene una versión diferente del mismo diseño:
 
-feature/vanilla: implementación base usando CSS puro
-feature/sass: el mismo diseño refactorizado con SASS
-feature/tailwind: versión final utilizando Tailwind CSS
+* feature/vanilla: implementación base usando CSS puro
+
+* feature/sass: el mismo diseño refactorizado con SASS
+
+* feature/tailwind: versión final utilizando Tailwind CSS
+
 Cada rama es independiente, por lo que puedes cambiar entre ellas y ver cómo se construye el mismo diseño con distintas tecnologías.
 
 ## 🚀 Cómo empezar

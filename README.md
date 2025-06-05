@@ -6,7 +6,7 @@ El mismo diseño se ha implementado tres veces usando:
   SASS
   Tailwind CSS
   
-## 🧩 PEstructura del proyecto
+## 🧩 Estructura del proyecto
 El proyecto está organizado en ramas de Git separadas, cada una contiene una versión diferente del mismo diseño:
 
 * feature/vanilla: implementación base usando CSS puro
